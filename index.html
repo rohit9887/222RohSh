@@ -1,40 +1,62 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Babbuuu ❤️</title>
+<title>Babbuuu ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
 body{
     margin:0;
     overflow:hidden;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    font-family:Arial;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff6a88,#ff99ac);
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
-    color:white;
     text-align:center;
+    color:white;
+}
+
+.container{
+    z-index:2;
 }
 
 h1{
-    font-size:42px;
+    font-size:50px;
     animation: glow 2s infinite alternate;
 }
 
 h2{
     margin-top:10px;
+    font-weight:normal;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d6d;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.15);
 }
 
 @keyframes glow{
     from{ text-shadow:0 0 10px white;}
-    to{ text-shadow:0 0 30px white;}
+    to{ text-shadow:0 0 35px white;}
 }
 
 .heart{
     position:absolute;
-    color:red;
+    color:#ff1744;
     animation: float 6s linear infinite;
 }
 
@@ -48,12 +70,13 @@ h2{
         opacity:0;
     }
 }
+
 </style>
 
 <script>
+
 window.onload=function(){
-alert("It's 12:30 let's connect Babbuuu ❤️");
-setInterval(createHeart,300);
+alert("It's 12:30 ❤️ let's connect Babbuuu 😘");
 }
 
 function createHeart(){
@@ -61,24 +84,39 @@ function createHeart(){
     heart.className="heart";
     heart.innerHTML="❤️";
     heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*20+20)+"px";
+    heart.style.fontSize=(Math.random()*30+20)+"px";
+
     document.body.appendChild(heart);
 
     setTimeout(()=>{
         heart.remove();
     },6000);
 }
+
+setInterval(createHeart,250);
+
+function message(){
+alert("I miss you Babbuuu ❤️ Call me!");
+}
+
 </script>
 
 </head>
 
 <body>
 
-<div>
+<div class="container">
+
 <h1>Babbuuu ❤️</h1>
-<h2>You are my favorite notification 💌</h2>
-<p>Clicking this means you owe me a call 😜</p>
+
+<h2>You make my world brighter ✨</h2>
+
+<p>If you miss me too click below 😜</p>
+
+<button onclick="message()">Click Me 💌</button>
+
 </div>
 
 </body>
+
 </html>
